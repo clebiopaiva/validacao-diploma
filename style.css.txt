@@ -1,0 +1,86 @@
+🎨 Arquivo CSS (style.css)
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.certificate-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.seal {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
+.seal-img {
+    width: 100px;
+    opacity: 0.8;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.institution {
+    color: #7f8c8d;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.certificate-data {
+    margin: 30px 0;
+}
+
+.data-row {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+}
+
+.label {
+    font-weight: bold;
+    width: 200px;
+    color: #555;
+}
+
+.value {
+    flex: 1;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+.signature {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #95a5a6;
+    text-align: center;
+    border-top: 1px solid #ecf0f1;
+    padding-top: 15px;
+}
