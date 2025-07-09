@@ -5,34 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validação de Certificado</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionais para o novo layout */
+        .university-header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 15px;
+        }
+        
+        .university-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a3a6d;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .diploma-title {
+            font-size: 20px;
+            color: #2c3e50;
+        }
+        
+        .student-info {
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+        
+        .info-row {
+            margin-bottom: 12px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            display: inline-block;
+            width: 180px;
+        }
+        
+        .emec-code {
+            background-color: #f0f7ff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="certificate-container">
-        <!-- Cabeçalho com seu logo -->
-        <header>
-            <img src="logo.png" alt="Logo do Curso" class="logo">
-            <h1>CERTIFICADO VERIFICADO</h1>
-        </header>
+        <!-- Cabeçalho com nome da instituição -->
+        <div class="university-header">
+            <div class="university-name">CENTRO UNIVERSITÁRIO FAVENI - UNIFAVENI</div>
+            <div class="diploma-title">DIPLOMA DIGITAL</div>
+        </div>
 
-        <!-- Área de validação -->
-        <div class="validation-box">
-            <div class="verified-badge">✅ VALIDADO</div>
-            
-            <div class="certificate-info">
-                <p><strong>Nome do Participante:</strong> <span id="student-name">[NOME_DO_ALUNO]</span></p>
-                <p><strong>Curso:</strong> <span id="course-name">[NOME_DO_CURSO]</span></p>
-                <p><strong>Carga Horária:</strong> <span id="workload">[CARGA_HORÁRIA]</span></p>
-                <p><strong>Data de Emissão:</strong> <span id="issue-date">[DATA]</span></p>
-                <p><strong>Código de Validação:</strong> <span id="validation-code">#2024-XXXXX</span></p>
+        <!-- Informações do estudante -->
+        <div class="student-info">
+            <div class="info-row">
+                <span class="info-label">Nome:</span>
+                <span class="value">Antonio Clebio Duarte Paiva</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">RG:</span>
+                <span class="value">2003015125179</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Curso:</span>
+                <span class="value">Licenciatura em Pedagogia</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Código Curso EMEC:</span>
+                <span class="emec-code">1487632</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Data da emissão:</span>
+                <span class="value">16/10/2024</span>
             </div>
         </div>
 
+        <!-- QR Code de validação -->
+        <div class="qrcode-section" style="text-align: center; margin: 30px 0;">
+            <p style="margin-bottom: 10px; font-weight: bold;">VALIDAR DOCUMENTO</p>
+            <!-- Adicione sua imagem de QR Code aqui -->
+            <!-- <img src="qrcode.png" alt="QR Code de Validação" width="150"> -->
+            <p style="font-size: 12px; margin-top: 10px;">Escaneie este QR Code para verificação online</p>
+        </div>
+
         <!-- Rodapé institucional -->
-        <footer>
-            <p>Emitido por: <strong>[SEU_NOME]</strong></p>
-            <p>Para dúvidas, contate: <a href="mailto:seu@email.com">seu@email.com</a></p>
-            <div class="disclaimer">
-                <p>⚠️ Este certificado é válido apenas quando verificado através deste sistema.</p>
+        <footer style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+            <div style="text-align: center;">
+                <p style="margin-bottom: 10px;">Documento emitido digitalmente por:</p>
+                <p style="font-weight: bold;">Clebio Paiva | Especialista em Educação</p>
+                <p style="font-size: 12px; margin-top: 15px;">Verificação válida até: 16/10/2026</p>
             </div>
         </footer>
     </div>
