@@ -3,134 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validação de Diploma - UNIFAVENI</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Diploma Digital - UNIFAVENI</title>
     <style>
         body {
             font-family: 'Times New Roman', serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            color: #000;
             line-height: 1.6;
         }
-        .container {
+        .diploma-container {
             max-width: 800px;
-            margin: 20px auto;
-            background: white;
+            margin: 0 auto;
+            background: #fff;
             padding: 40px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #1a3a6d;
-            padding-bottom: 15px;
-        }
-        .university-name {
-            font-size: 22px;
-            font-weight: bold;
-            color: #1a3a6d;
-            text-transform: uppercase;
-        }
-        .document-title {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .student-info {
-            margin: 25px 0;
-        }
         .info-row {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
         .info-label {
             font-weight: bold;
             display: inline-block;
-            width: 180px;
+            width: 150px;
         }
-        .legal-info {
+        .legal-text {
             margin-top: 30px;
             font-size: 14px;
             line-height: 1.5;
         }
-        .pdf-viewer {
-            margin: 30px 0;
-            border: 1px solid #ddd;
-            padding: 15px;
-            text-align: center;
-        }
-        .download-btn {
-            display: inline-block;
-            background-color: #1a3a6d;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 15px;
-        }
-        .footer {
-            margin-top: 40px;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-            font-size: 12px;
-        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Cabeçalho -->
-        <div class="header">
-            <div class="university-name">CENTRO UNIVERSITÁRIO FAVENI - UNIFAVENI</div>
-            <div class="document-title">DIPLOMA DIGITAL</div>
+    <div class="diploma-container">
+        <div class="info-row">
+            <span class="info-label">Nome:</span>
+            <span>Antonio Clebio Duarte Paiva</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Curso:</span>
+            <span>Licenciatura em Pedagogia</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Código Curso EMEC:</span>
+            <span>1487632</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Data da conclusão:</span>
+            <span>11/12/2024</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Colação de Grau:</span>
+            <span>13/12/2024</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Data da emissão:</span>
+            <span>16/12/2024</span>
         </div>
 
-        <!-- Informações do estudante -->
-        <div class="student-info">
-            <div class="info-row">
-                <span class="info-label">Nome:</span>
-                <span class="value">Antonio Clebio Duarte Paiva</span>
-            </div>
-            <div class="info-row">
-                <span class="info-label">RG:</span>
-                <span class="value">2003015125179</span>
-            </div>
-            <div class="info-row">
-                <span class="info-label">Curso:</span>
-                <span class="value">Licenciatura em Pedagogia</span>
-            </div>
-            <div class="info-row">
-                <span class="info-label">Código Curso EMEC:</span>
-                <span class="value">1487632</span>
-            </div>
-            <div class="info-row">
-                <span class="info-label">Data da conclusão:</span>
-                <span class="value">11/12/2024</span>
-            </div>
-            <div class="info-row">
-                <span class="info-label">Colação de Grau:</span>
-                <span class="value">13/12/2024</span>
-            </div>
-            <div class="info-row">
-                <span class="info-label">Data da emissão:</span>
-                <span class="value">16/12/2024</span>
-            </div>
-        </div>
-
-        <!-- Informações legais -->
-        <div class="legal-info">
+        <div class="legal-text">
             <p><strong>Reconhecimento:</strong> Portaria nº 838, de 20/09/2022, publicada no D.O.U. nº 187 de 30/09/2022, seção 1, pág. 45.</p>
             <p><strong>Diploma registrado sob o nº 569</strong>, livro 05/2024, folha 569, processo 569/2024, nos termos da Lei nº 9.394/96, de 20 de dezembro de 1996, e do Decreto nº 9.235, de 15 de dezembro de 2017, art. 99, §2º.</p>
-        </div>
-
-        <!-- Visualização do PDF -->
-        <div class="pdf-viewer">
-            <h3>Visualização do Diploma</h3>
-            <iframe src="diploma.pdf" width="100%" height="500px" style="border: none;"></iframe>
-            <a href="diploma.pdf" class="download-btn" download="Diploma_Antonio_Clebio.pdf">Download do Diploma (PDF)</a>
-        </div>
-
-        <!-- Rodapé -->
-        <div class="footer">
-            <p>Documento válido mediante verificação online. Para confirmar a autenticidade, acesse o sistema oficial da UNIFAVENI.</p>
-            <p>Verificação válida até: 16/12/2026</p>
         </div>
     </div>
 </body>
