@@ -3,118 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validação Acadêmica de Diploma</title>
+    <title>Validação Oficial de Diploma</title>
     <style>
         body {
-            font-family: 'Georgia', serif;
-            background-color: #f8f6f2;
+            font-family: 'Times New Roman', serif;
+            background-color: #f9f9f7;
             margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-            background-image: url('https://i.imgur.com/JQ9pSdW.png');
-            background-repeat: no-repeat;
-            background-position: right top;
-            background-size: 150px;
+            padding: 40px 0;
+            color: #222;
+            line-height: 1.5;
         }
-        .academic-container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 50px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.08);
-            border: 1px solid #e0d6c2;
+        .documento-oficial {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 30mm;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
             position: relative;
+            box-sizing: border-box;
         }
-        .header {
+        .cabecalho {
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px double #1a3a6d;
+            margin-bottom: 24pt;
+            padding-bottom: 12pt;
+            border-bottom: 2pt solid #1a3a6d;
         }
-        h1 {
-            color: #1a3a6d;
-            font-size: 28px;
-            margin: 0;
+        .titulo-principal {
+            font-size: 16pt;
             font-weight: normal;
-            letter-spacing: 1px;
+            letter-spacing: 0.5pt;
+            color: #1a3a6d;
+            text-transform: uppercase;
+            margin: 0;
         }
-        .seal {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            width: 80px;
-            opacity: 0.8;
+        .dados-diploma {
+            margin: 36pt 0;
         }
-        .diploma-info {
-            margin: 30px 0;
-        }
-        .info-row {
-            margin-bottom: 18px;
+        .linha-dado {
+            margin-bottom: 12pt;
             display: flex;
         }
-        .info-label {
+        .rotulo {
             font-weight: bold;
-            width: 180px;
+            width: 50mm;
+            flex-shrink: 0;
+        }
+        .valor {
+            flex-grow: 1;
+            border-bottom: 0.75pt solid #ddd;
+            padding-bottom: 1pt;
+        }
+        .texto-legal {
+            margin-top: 48pt;
+            font-size: 10.5pt;
+            line-height: 1.4;
+        }
+        .referencia-legal {
+            margin-top: 24pt;
+            font-size: 9pt;
             color: #555;
-        }
-        .info-value {
-            flex: 1;
-        }
-        .legal-text {
-            margin-top: 40px;
-            font-size: 14px;
-            line-height: 1.6;
-            border-top: 1px solid #e0d6c2;
-            padding-top: 20px;
-        }
-        .watermark {
-            position: absolute;
-            opacity: 0.1;
-            font-size: 120px;
-            transform: rotate(-45deg);
-            z-index: 0;
-            white-space: nowrap;
+            border-top: 0.75pt solid #ddd;
+            padding-top: 12pt;
         }
     </style>
 </head>
 <body>
-    <div class="academic-container">
-        <div class="watermark">VALIDAÇÃO OFICIAL</div>
-        
-        <div class="header">
-            <h1>VALIDAÇÃO DE DIPLOMA ACADÊMICO</h1>
+    <div class="documento-oficial">
+        <div class="cabecalho">
+            <h1 class="titulo-principal">VALIDAÇÃO DE DIPLOMA ACADÊMICO</h1>
         </div>
 
-        <div class="diploma-info">
-            <div class="info-row">
-                <div class="info-label">Nome:</div>
-                <div class="info-value">Antonio Clebio Duarte Paiva</div>
+        <div class="dados-diploma">
+            <div class="linha-dado">
+                <div class="rotulo">Nome:</div>
+                <div class="valor">Antonio Clebio Duarte Paiva</div>
             </div>
-            <div class="info-row">
-                <div class="info-label">Curso:</div>
-                <div class="info-value">Licenciatura em Pedagogia</div>
+            <div class="linha-dado">
+                <div class="rotulo">Curso:</div>
+                <div class="valor">Licenciatura em Pedagogia</div>
             </div>
-            <div class="info-row">
-                <div class="info-label">Código EMEC:</div>
-                <div class="info-value">1487632</div>
+            <div class="linha-dado">
+                <div class="rotulo">Código EMEC:</div>
+                <div class="valor">1487632</div>
             </div>
-            <div class="info-row">
-                <div class="info-label">Data da conclusão:</div>
-                <div class="info-value">11/12/2024</div>
+            <div class="linha-dado">
+                <div class="rotulo">Data da conclusão:</div>
+                <div class="valor">11 de dezembro de 2024</div>
             </div>
-            <div class="info-row">
-                <div class="info-label">Colação de Grau:</div>
-                <div class="info-value">13/12/2024</div>
+            <div class="linha-dado">
+                <div class="rotulo">Colação de Grau:</div>
+                <div class="valor">13 de dezembro de 2024</div>
             </div>
-            <div class="info-row">
-                <div class="info-label">Data da emissão:</div>
-                <div class="info-value">16/12/2024</div>
+            <div class="linha-dado">
+                <div class="rotulo">Data da emissão:</div>
+                <div class="valor">16 de dezembro de 2024</div>
             </div>
         </div>
 
-        <div class="legal-text">
-            <p><strong>Reconhecimento institucional:</strong> Portaria nº 838, de 20/09/2022, publicada no D.O.U. nº 187 de 30/09/2022, seção 1, pág. 45.</p>
+        <div class="texto-legal">
+            <p><strong>Reconhecimento institucional:</strong> Portaria nº 838, de 20 de setembro de 2022, publicada no Diário Oficial da União nº 187, de 30 de setembro de 2022, Seção 1, página 45.</p>
+            
+            <p><strong>Registro acadêmico:</strong> Diploma registrado sob o nº 569, Livro 05/2024, Folha 569, Processo 569/2024, conforme disposto na Lei nº 9.394/96 (Lei de Diretrizes e Bases da Educação Nacional) e no Decreto nº 9.235/2017, Art. 99, §2º.</p>
+        </div>
+
+        <div class="referencia-legal">
+            Sistema de Validação Digital - Diretoria de Registros Acadêmicos
         </div>
     </div>
 </body>
