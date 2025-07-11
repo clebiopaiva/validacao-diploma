@@ -3,84 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validação de Diploma</title>
+    <title>Validação Acadêmica de Diploma</title>
     <style>
         body {
-            font-family: 'Times New Roman', serif;
-            background-color: #f9f9f9;
+            font-family: 'Georgia', serif;
+            background-color: #f8f6f2;
             margin: 0;
-            padding: 20px;
-            color: #000;
+            padding: 0;
+            color: #333;
             line-height: 1.6;
+            background-image: url('https://i.imgur.com/JQ9pSdW.png');
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: 150px;
         }
-        .diploma-container {
+        .academic-container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 40px auto;
             background: #fff;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border: 1px solid #ddd;
+            padding: 50px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+            border: 1px solid #e0d6c2;
+            position: relative;
         }
         .header {
             text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #1a3a6d;
-            padding-bottom: 15px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px double #1a3a6d;
         }
         h1 {
             color: #1a3a6d;
-            font-size: 24px;
+            font-size: 28px;
             margin: 0;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        .seal {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 80px;
+            opacity: 0.8;
+        }
+        .diploma-info {
+            margin: 30px 0;
         }
         .info-row {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            display: flex;
         }
         .info-label {
             font-weight: bold;
-            display: inline-block;
-            width: 150px;
+            width: 180px;
+            color: #555;
+        }
+        .info-value {
+            flex: 1;
         }
         .legal-text {
-            margin-top: 30px;
+            margin-top: 40px;
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.6;
+            border-top: 1px solid #e0d6c2;
+            padding-top: 20px;
+        }
+        .watermark {
+            position: absolute;
+            opacity: 0.1;
+            font-size: 120px;
+            transform: rotate(-45deg);
+            z-index: 0;
+            white-space: nowrap;
         }
     </style>
 </head>
 <body>
-    <div class="diploma-container">
+    <div class="academic-container">
+        <div class="watermark">VALIDAÇÃO OFICIAL</div>
+        
         <div class="header">
-            <h1>VALIDAÇÃO DO DIPLOMA DIGITAL</h1>
+            <h1>VALIDAÇÃO DE DIPLOMA ACADÊMICO</h1>
         </div>
 
-        <div class="info-row">
-            <span class="info-label">Nome:</span>
-            <span>Antonio Clebio Duarte Paiva</span>
-        </div>
-        <div class="info-row">
-            <span class="info-label">Curso:</span>
-            <span>Licenciatura em Pedagogia</span>
-        </div>
-        <div class="info-row">
-            <span class="info-label">Código EMEC:</span>
-            <span>1487632</span>
-        </div>
-        <div class="info-row">
-            <span class="info-label">Data da conclusão:</span>
-            <span>11/12/2024</span>
-        </div>
-        <div class="info-row">
-            <span class="info-label">Colação de Grau:</span>
-            <span>13/12/2024</span>
-        </div>
-        <div class="info-row">
-            <span class="info-label">Data da emissão:</span>
-            <span>16/12/2024</span>
+        <div class="diploma-info">
+            <div class="info-row">
+                <div class="info-label">Nome:</div>
+                <div class="info-value">Antonio Clebio Duarte Paiva</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Curso:</div>
+                <div class="info-value">Licenciatura em Pedagogia</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Código EMEC:</div>
+                <div class="info-value">1487632</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Data da conclusão:</div>
+                <div class="info-value">11/12/2024</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Colação de Grau:</div>
+                <div class="info-value">13/12/2024</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Data da emissão:</div>
+                <div class="info-value">16/12/2024</div>
+            </div>
         </div>
 
         <div class="legal-text">
-            <p><strong>Reconhecimento:</strong> Portaria nº 838, de 20/09/2022, publicada no D.O.U. nº 187 de 30/09/2022, seção 1, pág. 45.</p>
-            <p><strong>Registro:</strong> Diploma nº 569, livro 05/2024, folha 569, processo 569/2024 (Lei nº 9.394/96 e Decreto nº 9.235/2017, art. 99, §2º).</p>
+            <p><strong>Reconhecimento institucional:</strong> Portaria nº 838, de 20/09/2022, publicada no D.O.U. nº 187 de 30/09/2022, seção 1, pág. 45.</p>
         </div>
     </div>
 </body>
