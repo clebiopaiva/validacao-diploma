@@ -6,159 +6,285 @@
     <title>Validação de Diploma - UNIFAVENI</title>
     <style>
         :root {
-    --azul-instituicional: #1a3a6d;
-    --dourado-academico: #b38b59;
-    --cinza-texto: #444;
-    --fundo-claro: #f9f8f5;
-}
+            --azul-profundo: #0a2351;
+            --dourado-academico: #c9a66b;
+            --cinza-escuro: #333333;
+            --cinza-claro: #f5f4f0;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
         
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
-            background-color: var(--fundo-claro);
-            margin: 0;
-            padding: 0;
-            color: var(--cinza-texto);
+            background-color: var(--cinza-claro);
+            color: var(--cinza-escuro);
             line-height: 1.6;
-            background-image: linear-gradient(
-                rgba(248, 247, 245, 0.9), 
-                rgba(248, 247, 245, 0.9)
-            );
-        }
-
-        .documento-container {
-            width: 21cm;
-            min-height: 29.7cm;
-            margin: 2cm auto;
-            padding: 3cm;
-            background: white;
-            box-shadow: 0 0 25px rgba(0,0,0,0.1);
-            position: relative;
-            border: 1px solid #e0e0e0;
-        }
-
-        .cabecalho {
-            text-align: center;
-            margin-bottom: 2.5cm;
-            position: relative;
-        }
-
-        .titulo-principal {
-            color: var(--azul-instituicional);
-            font-size: 1.8rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid var(--dourado-academico);
-        }
-
-        .selo-academico {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 80px;
-            opacity: 0.15;
-        }
-
-        .dados-diploma {
-            margin: 2cm 0;
-        }
-
-        .linha-dado {
+            padding: 20px;
             display: flex;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .certificate-container {
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e0e0e0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .certificate-header {
+            background: var(--azul-profundo);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .institution-name {
+            color: white;
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        
+        .certificate-title {
+            color: var(--dourado-academico);
+            font-size: 28px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 15px 0;
+        }
+        
+        .certificate-body {
+            padding: 40px;
+            position: relative;
+        }
+        
+        .validation-text {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .diploma-info {
+            margin: 30px 0;
+        }
+        
+        .info-row {
+            display: flex;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
             border-bottom: 1px solid #eee;
         }
-
-        .rotulo {
-            font-weight: 600;
-            width: 4.5cm;
-            color: var(--azul-instituicional);
+        
+        .info-label {
+            font-weight: bold;
+            width: 180px;
+            color: var(--azul-profundo);
             flex-shrink: 0;
         }
-
-        .valor {
+        
+        .info-value {
             flex-grow: 1;
-            color: var(--cinza-texto);
+            color: var(--cinza-escuro);
         }
-
-        .texto-legal {
-            margin-top: 2.5cm;
-            font-size: 0.9rem;
-            line-height: 1.7;
-            border-top: 1px solid var(--dourado-academico);
-            padding-top: 1rem;
+        
+        .legal-section {
+            background: #f9f8f5;
+            border-left: 4px solid var(--dourado-academico);
+            padding: 20px;
+            margin: 40px 0;
+            font-size: 14px;
+            line-height: 1.6;
         }
-
-        .referencia-legal {
-            font-size: 0.8rem;
-            color: #777;
-            text-align: center;
-            margin-top: 2cm;
-            font-style: italic;
+        
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
         }
-
-        /* Efeitos de papel timbrado */
-        .documento-container::before {
+        
+        .signature-block {
+            flex: 1;
+            padding: 0 10px;
+        }
+        
+        .signature-line {
+            height: 1px;
+            background: #ccc;
+            margin: 40px 0 10px;
+            position: relative;
+        }
+        
+        .signature-line:before {
             content: "";
             position: absolute;
-            top: 0;
+            top: -10px;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="50" font-family="Georgia" font-size="10" fill="rgba(179, 139, 89, 0.05)">UNIFAVENI</text></svg>');
-            opacity: 0.1;
+            height: 1px;
+            background: #ccc;
+        }
+        
+        .signature-name {
+            font-weight: bold;
+            margin-top: 5px;
+            color: var(--azul-profundo);
+        }
+        
+        .signature-title {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .contact-info {
+            font-size: 13px;
+            margin-top: 5px;
+            color: #666;
+        }
+        
+        .certificate-footer {
+            background: var(--azul-profundo);
+            padding: 15px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+        }
+        
+        /* Elementos decorativos */
+        .corner-decoration {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--dourado-academico);
+        }
+        
+        .top-left {
+            top: 15px;
+            left: 15px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .top-right {
+            top: 15px;
+            right: 15px;
+            border-left: none;
+            border-bottom: none;
+        }
+        
+        .bottom-left {
+            bottom: 15px;
+            left: 15px;
+            border-right: none;
+            border-top: none;
+        }
+        
+        .bottom-right {
+            bottom: 15px;
+            right: 15px;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .watermark {
+            position: absolute;
+            opacity: 0.03;
+            font-size: 120px;
+            font-weight: bold;
+            transform: rotate(-45deg);
+            top: 30%;
+            left: 10%;
+            white-space: nowrap;
             pointer-events: none;
+            color: var(--azul-profundo);
         }
     </style>
 </head>
 <body>
-    <div class="documento-container">
-        <div class="cabecalho">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='none' stroke='%23b38b59' stroke-width='2'/><text x='50' y='55' font-family='Georgia' font-size='16' fill='%23b38b59' text-anchor='middle'>UNIFAVENI</text></svg>" 
-                 alt="Selo Acadêmico" 
-                 class="selo-academico">
-            <h1 class="titulo-principal">Validação de Diploma Digital</h1>
+    <div class="certificate-container">
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+        
+        <div class="certificate-header">
+            <div class="institution-name">CENTRO UNIVERSITÁRIO FAVENI - UNIFAVENI</div>
+            <div class="certificate-title">Validação de Diploma Digital</div>
         </div>
-
-        <div class="dados-diploma">
-            <div class="linha-dado">
-                <div class="rotulo">Nome:</div>
-                <div class="valor">Antonio Clebio Duarte Paiva</div>
-            </div>
-            <div class="linha-dado">
-                <div class="rotulo">Curso:</div>
-                <div class="valor">Licenciatura em Pedagogia</div>
-            </div>
-            <div class="linha-dado">
-                <div class="rotulo">Código EMEC:</div>
-                <div class="valor">1487632</div>
-            </div>
-            <div class="linha-dado">
-                <div class="rotulo">Data da conclusão:</div>
-                <div class="valor">11 de dezembro de 2024</div>
-            </div>
-            <div class="linha-dado">
-                <div class="rotulo">Colação de Grau:</div>
-                <div class="valor">13 de dezembro de 2024</div>
-            </div>
-            <div class="linha-dado">
-                <div class="rotulo">Data da emissão:</div>
-                <div class="valor">16 de dezembro de 2024</div>
-            </div>
-        </div>
-
-        <div class="texto-legal">
-            <p><strong>Reconhecimento institucional:</strong> Portaria nº 838, de 20 de setembro de 2022, publicada no Diário Oficial da União nº 187, de 30 de setembro de 2022, Seção 1, página 45.</p>
+        
+        <div class="certificate-body">
+            <div class="watermark">UNIFAVENI</div>
             
-            <p><strong>Registro acadêmico:</strong> Diploma registrado sob o nº 569, Livro 05/2024, Folha 569, Processo 569/2024, nos termos da Lei nº 9.394/96 (Lei de Diretrizes e Bases da Educação Nacional) e do Decreto nº 9.235/2017, Art. 99, §2º.</p>
+            <div class="validation-text">
+                O presente documento certifica a validade do diploma conforme registrado em nossos sistemas acadêmicos e atendendo às normas educacionais vigentes.
+            </div>
+            
+            <div class="diploma-info">
+                <div class="info-row">
+                    <div class="info-label">Nome:</div>
+                    <div class="info-value">Antonio Clebio Duarte Paiva</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Curso:</div>
+                    <div class="info-value">Licenciatura em Pedagogia</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Código EMEC:</div>
+                    <div class="info-value">1487632</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Data da conclusão:</div>
+                    <div class="info-value">11 de dezembro de 2024</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Colação de Grau:</div>
+                    <div class="info-value">13 de dezembro de 2024</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Data da emissão:</div>
+                    <div class="info-value">16 de dezembro de 2024</div>
+                </div>
+            </div>
+            
+            <div class="legal-section">
+                <p><strong>Reconhecimento institucional:</strong> Portaria nº 838, de 20 de setembro de 2022, publicada no Diário Oficial da União nº 187, de 30 de setembro de 2022, Seção 1, página 45.</p>
+                
+                <p><strong>Registro acadêmico:</strong> Diploma registrado sob o nº 569, Livro 05/2024, Folha 569, Processo 569/2024, nos termos da Lei nº 9.394/96 (Lei de Diretrizes e Bases da Educação Nacional) e do Decreto nº 9.235/2017, Art. 99, §2º.</p>
+            </div>
+            
+            <div class="signature-section">
+                <div class="signature-block">
+                    <div class="signature-line"></div>
+                    <div class="signature-name">Prof. Ana Beatriz Silva</div>
+                    <div class="signature-title">Diretora Acadêmica</div>
+                    <div class="contact-info">Email: diretoria@unifaveni.edu.br</div>
+                </div>
+                
+                <div class="signature-block">
+                    <div class="signature-line"></div>
+                    <div class="signature-name">Dr. Carlos Eduardo Mendes</div>
+                    <div class="signature-title">Coordenador de Registros</div>
+                    <div class="contact-info">Tel: (11) 3456-7890</div>
+                </div>
+            </div>
         </div>
-
-        <div class="referencia-legal">
-            Sistema de Validação Digital - Registro Acadêmico | UNIFAVENI
+        
+        <div class="certificate-footer">
+            Sistema de Validação Digital - Registro Acadêmico | Diploma Digital © 2024
         </div>
     </div>
 </body>
